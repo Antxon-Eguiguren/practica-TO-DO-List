@@ -19,36 +19,45 @@
                 <div class="container">
                     <div class="titulo">
                         <h1>My TO-DO List</h1>
+                        <div></div>
                     </div>
-                    <div class="seccion_crear">
-                        <form action="#" method="GET">
-                            <div class="nombre_tarea">
-                                <input type="text" id="nombreTareaCrear" placeholder="Introduce el nombre de la tarea">
-                            </div>
-                            <div class="prioridad_tarea">
-                                <select name="prioridad" id="prioridadTareaCrear">
-                                    <option value="">Selecciona una prioridad</option>
-                                    <option value="urgente">Urgente</option>
-                                    <option value="diaria">Diaria</option>
-                                    <option value="mensual">Mensual</option>
-                                </select>
-                            </div>
-                            <div class="crear_tarea">
-                                <input type="submit" value="Crear Tarea" id="crearTarea">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="seccion_filtrar">
-                        <div class="prioridad_tarea">
-                            <select name="prioridad" id="prioridadTareaFiltrar">
-                                <option value="todas">Todas las tareas</option>
-                                <option value="urgente">Urgente</option>
-                                <option value="diaria">Diaria</option>
-                                <option value="mensual">Mensual</option>
-                            </select>
+                    <div class="opciones">
+                        <div class="seccion_crear">
+                            <form action="#" method="GET" autocomplete="off">
+                                <div class="nombre_tarea">
+                                    <input type="text" id="nombreTareaCrear"
+                                        placeholder="Introduce el nombre de la tarea">
+                                </div>
+                                <div class="prioridad_tarea">
+                                    <select name="prioridad" id="prioridadTareaCrear">
+                                        <option value="">Selecciona una prioridad</option>
+                                        <option value="urgente">Urgente</option>
+                                        <option value="diaria">Diaria</option>
+                                        <option value="mensual">Mensual</option>
+                                    </select>
+                                </div>
+                                <div class="crear_tarea">
+                                    <input type="submit" value="Crear Tarea" id="crearTarea">
+                                </div>
+                            </form>
                         </div>
-                        <div class="buscar">
-                            <input type="text" id="nombreTareaFiltrar" placeholder="Buscar tarea por nombre">
+                        <div class="seccion_filtrar">
+                            <div>
+                                <div class="buscar_tarea">
+                                    <input type="text" id="nombreTareaFiltrar" placeholder="Buscar tarea por nombre">
+                                </div>
+                                <div class="filtrar_tarea">
+                                    <input type="submit" value="Buscar Tarea(s)" id="filtrarTarea">
+                                </div>
+                                <div class="prioridad_tarea">
+                                    <select name="prioridad" id="prioridadTareaFiltrar">
+                                        <option value="todas">Todas las tareas</option>
+                                        <option value="urgente">Urgente</option>
+                                        <option value="diaria">Diaria</option>
+                                        <option value="mensual">Mensual</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,29 +72,28 @@
                             <h2>Estudiar Javascript</h2>
                         </div>
                         <div>
-                            <a href="#">Eliminar</a>
+                            <a href="#"><i class="fas fa-trash-alt"></i></a>
                         </div>
                     </article>
                     <article class="diaria">
                         <div>
-                            <h2>Comer</h2>
+                            <h2>Ir a Neoland</h2>
                         </div>
                         <div>
-                            <a href="#">Eliminar</a>
+                            <a href="#"><i class="fas fa-trash-alt"></i></a>
                         </div>
                     </article>
                     <article class="mensual">
                         <div>
-                            <h2>Esquiar</h2>
+                            <h2>Viajar al pueblo</h2>
                         </div>
                         <div>
-                            <a href="#">Eliminar</a>
+                            <a href="#"><i class="fas fa-trash-alt"></i></a>
                         </div>
                     </article>
                 </div>
             </section>
         </main>
-
     </div>
 
     <script src="js/modelo.js"></script>
