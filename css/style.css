@@ -152,6 +152,10 @@ main .container article {
     box-shadow: 8px 8px 10px #aaa;
 }
 
+main .container h3 {
+    font-size: 2em;
+}
+
 main .container article div:first-child {
     width: 90%;
 }
