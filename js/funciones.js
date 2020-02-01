@@ -41,20 +41,22 @@ function pintarTareas(pListadoTareas) {
         seccionTareas.appendChild(articulo);
     }
     if (listadoTareas.length == 0) {
-        seccionTareas.innerHTML += '<h3>No hay tareas pendientes</h3>';
+        seccionTareas.innerHTML = '<h3>No hay tareas pendientes</h3>';
     }
 }
 
+// Función que recoge los datos necesarios para borrar una tarea (el ID) y llama a borrarTarea
 function recogerDatosBorrarTarea(e) {
     id = e.target.dataset.id;
-    console.log(id)
     borrarTarea(listadoTareas, id);
+    selectorTareas.value = 'todas';
+    buscarTarea.value = '';
 }
 
 // Función que se activa con el botón de crear tarea y lo que hace es comprobar si los datos se han introducido y en caso afirmativo añade la tarea al array y llama a pintarTareas.
 function crearTarea(pListadoTareas, pNombre, pPrioridad) {
     if (pNombre == '' || pPrioridad == '') {
-        mensajeError.innerHTML = '<p>El nombre y la prioridad son obligatorios.</p>';
+        mensajeError.innerHTML = '<p>El nombre y la prioridad son obligatorios</p>';
     } else {
         let ultimoId = 0;
         for (tarea of pListadoTareas) {
@@ -67,7 +69,7 @@ function crearTarea(pListadoTareas, pNombre, pPrioridad) {
     }
 }
 
-// Borra una tarea del array y llama a pintarTareas
+// Función que borra una tarea del array y llama a pintarTareas
 function borrarTarea(pListadoTareas, pId) {
     let posicion = pListadoTareas.findIndex((tarea) => {
         return tarea.id == pId;
@@ -78,6 +80,7 @@ function borrarTarea(pListadoTareas, pId) {
     }
 }
 
+// Función que filtra las tareas y llama a pintarTareas con el array completo o el array filtrado, dependiendo de la selección del usuario
 function filtrarTareas(pListadoTareas, pPrioridad) {
     let listadoTareasFiltrado = pListadoTareas.filter((tarea) => {
         return tarea.prioridad == pPrioridad;
@@ -89,10 +92,16 @@ function filtrarTareas(pListadoTareas, pPrioridad) {
     }
 }
 
-function buscarTareas() {
-
+// Función que busca tareas por nombre y llama a pintarTareas
+function buscarTareas(pListadoTareas, pBusqueda) {
+    let listaFiltradaBusqueda = new Array();
+    for (tarea of pListadoTareas) {
+        if (tarea.nombre.toLowerCase().includes(pBusqueda.toLowerCase())) {
+            listaFiltradaBusqueda.push(tarea);
+        }
+    }
+    return listaFiltradaBusqueda;
 }
-
 
 /* ----------------------------------------------------------------------------------------------------------
 LLAMADA A LAS FUNCIONES

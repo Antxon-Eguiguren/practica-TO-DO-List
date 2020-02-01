@@ -24,3 +24,5 @@ seccionTareas = document.getElementById('tareas');
 btnCrearTarea = document.getElementById('crearTarea');
 mensajeError = document.getElementById('mensajeError');
 formulario = document.getElementById('formulario');
+selectorTareas = document.getElementById('prioridadTareaFiltrar');
+buscarTarea = document.getElementById('nombreTareaFiltrar');

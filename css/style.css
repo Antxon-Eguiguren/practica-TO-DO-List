@@ -120,7 +120,7 @@ select {
     font-size: 1em;
 }
 
-#crearTarea, #filtrarTarea {
+#crearTarea {
     background-color: #aaa;
     border: none;
     color: white;
@@ -130,7 +130,7 @@ select {
     text-transform: uppercase;
 }
 
-#crearTarea:hover, #filtrarTarea:hover {
+#crearTarea:hover {
     background-color: green;
 }
 
@@ -138,6 +138,11 @@ select {
     color: red;
     font-size: .8em;
     margin-top: 10px;
+}
+
+h4 {
+    color: #ddd;
+    margin-top: 30px;
 }
 
 /* ----------------------------------------------------------------------------------------------------------
@@ -175,6 +180,7 @@ main .container article div:last-child {
     margin-right: 4%;
 }
 
+/* Lo meto de manera dinámica en JS porque no me coge los estilos del CSS */
 /* main .container article div:last-child a i {
     color: white;
     font-size: 2em;
