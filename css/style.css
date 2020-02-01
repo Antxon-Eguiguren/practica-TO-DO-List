@@ -134,6 +134,12 @@ select {
     background-color: green;
 }
 
+#mensajeError {
+    color: red;
+    font-size: .8em;
+    margin-top: 10px;
+}
+
 /* ----------------------------------------------------------------------------------------------------------
 ESTILOS MAIN
 ------------------------------------------------------------------------------------------------------------*/
@@ -169,8 +175,8 @@ main .container article div:last-child {
     margin-right: 4%;
 }
 
-main .container article div:last-child a i {
-    color:white;
+/* main .container article div:last-child a i {
+    color: white;
     font-size: 2em;
 }
 
@@ -179,7 +185,7 @@ main .container article div:last-child a:hover i {
 	animation-duration: 1.5s;
     animation-iteration-count: infinite;
     color: black;
-}
+} */
 
 main .urgente {
     background-color: #EB3737;

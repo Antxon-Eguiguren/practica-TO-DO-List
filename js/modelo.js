@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------------------------------------
-DECLARACIÓN DE LAS VARIABLES
+DECLARACIÓN DE LAS VARIABLES GLOBALES
 ------------------------------------------------------------------------------------------------------------*/
 
 const listadoTareas = new Array(
@@ -19,3 +19,8 @@ const listadoTareas = new Array(
         prioridad: 'mensual',
     },
 );
+
+seccionTareas = document.getElementById('tareas');
+btnCrearTarea = document.getElementById('crearTarea');
+mensajeError = document.getElementById('mensajeError');
+formulario = document.getElementById('formulario');
