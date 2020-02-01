@@ -5,13 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My TO-DO List</title>
+    <title>My TO-DO's</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="icon" type="text/css" href="images/check.ico">
 </head>
 
 <body>
 
+    <div class="wrapper">
+        <header>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="titulo">
+                        <h1>My TO-DO List</h1>
+                        <div></div>
+                    </div>
+                    <div class="opciones">
+                        <div class="seccion_crear">
+                            <form id="formulario" action="#" method="GET" autocomplete="off">
+                                <div class="nombre_tarea">
+                                    <input type="text" id="nombreTareaCrear"
+                                        placeholder="Introduce el nombre de la tarea">
+                                </div>
+                                <div class="prioridad_tarea">
+                                    <select name="prioridad" id="prioridadTareaCrear">
+                                        <option value="">Selecciona una prioridad</option>
+                                        <option value="urgente">Urgente</option>
+                                        <option value="diaria">Diaria</option>
+                                        <option value="mensual">Mensual</option>
+                                    </select>
+                                </div>
+                                <div class="crear_tarea">
+                                    <input type="submit" value="Crear Tarea" id="crearTarea">
+                                </div>
+                                <div id="mensajeError"></div>
+                            </form>
+                        </div>
+                        <div class="seccion_filtrar">
+                            <div>
+                                <div class="buscar_tarea">
+                                    <input type="text" id="nombreTareaFiltrar" placeholder="Buscar tarea por nombre">
+                                </div>
+                                <div>
+                                    <h4>Filtrar tarea:</h4>
+                                </div>
+                                <div class="prioridad_tarea">
+                                    <select name="prioridad" id="prioridadTareaFiltrar">
+                                        <option value="todas">Todas las tareas</option>
+                                        <option value="urgente">Urgente</option>
+                                        <option value="diaria">Diaria</option>
+                                        <option value="mensual">Mensual</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="container-fluid">
+                <div class="container" id="tareas">
+                    <!-- Aquí va el listado de tareas del array por JavaScript-->
+                </div>
+            </section>
+        </main>
+    </div>
+
     <script src="js/modelo.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/eventos.js"></script>
+
 </body>
 
 </html>

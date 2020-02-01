@@ -2,5 +2,293 @@
 IMPORT Y APUNTES
 ------------------------------------------------------------------------------------------------------------*/
 
-/* Import del reset de Eric Meyer */
 @import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Poppins|Bangers|Sue+Ellen+Francisco&display=swap');
+
+/* TIPOGRAFIAS
+    font-family: 'Bangers', cursive;  --> Para el Título h1
+    font-family: 'Sue Ellen Francisco', cursive; --> Para las Tareas
+    font-family: 'Poppins', sans-serif; --> Para el input type
+*/
+
+/* ----------------------------------------------------------------------------------------------------------
+ESTILOS GENERALES
+------------------------------------------------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2% 2%;
+}
+
+body {
+    font-family: 'Sue Ellen Francisco', cursive;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+ESTILOS HEADER
+------------------------------------------------------------------------------------------------------------*/
+
+header .container-fluid {
+    background-color: black;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+}
+
+header .container .opciones {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+header .container .seccion_crear,
+header .container .seccion_filtrar {
+    width: 50%;
+}
+
+header .container .seccion_crear {
+    border-right: 1px solid #aaa;
+    padding-right: 2%;
+}
+
+header .container .seccion_filtrar {
+    padding-left: 2%;
+}
+
+header .titulo {
+    font-family: 'Bangers', cursive;
+    font-size: 3.8em;
+    color: white;
+}
+
+header .titulo div {
+    background-color: orange;
+    height: 8px;
+    margin-bottom: 1%;
+}
+
+header .seccion_crear,
+header .seccion_filtrar {
+    padding: 1% 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header .seccion_crear form .nombre_tarea,
+header .seccion_crear form .prioridad_tarea,
+header .seccion_crear form .crear_tarea,
+header .seccion_filtrar div .buscar_tarea,
+header .seccion_filtrar div .filtrar_tarea,
+header .seccion_filtrar div .prioridad_tarea {
+    padding: 1% 0px;
+}
+
+header .seccion_crear form .nombre_tarea input,
+header .seccion_crear form .prioridad_tarea select,
+header .seccion_crear form .crear_tarea input,
+header .seccion_filtrar div .buscar_tarea input,
+header .seccion_filtrar div .filtrar_tarea input,
+header .seccion_filtrar div .prioridad_tarea select {
+    width: 100%;
+}
+
+input {
+    font-size: 1em;
+    padding: 3px;
+}
+
+select {
+    height: 34px;
+    font-size: 1em;
+}
+
+#crearTarea {
+    background-color: #aaa;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#crearTarea:hover {
+    background-color: green;
+}
+
+#mensajeError {
+    color: red;
+    font-size: .8em;
+    margin-top: 10px;
+}
+
+h4 {
+    color: #ddd;
+    margin-top: 30px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+ESTILOS MAIN
+------------------------------------------------------------------------------------------------------------*/
+
+main .container-fluid {
+    background-color: #F5F6F7;
+}
+
+main .container article {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0px;
+    margin: 2% 0px;
+    box-shadow: 8px 8px 10px #aaa;
+}
+
+main .container h3 {
+    font-size: 2em;
+}
+
+main .container article div:first-child {
+    width: 90%;
+}
+
+main .container article div:first-child h2 {
+    font-size: 2em;
+    margin-left: 4%;
+}
+
+main .container article div:last-child {
+    margin-right: 4%;
+}
+
+/* Lo meto de manera dinámica en JS porque no me coge los estilos del CSS */
+/* main .container article div:last-child a i {
+    color: white;
+    font-size: 2em;
+}
+
+main .container article div:last-child a:hover i {
+    animation-name: pulse;
+	animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    color: black;
+} */
+
+main .urgente {
+    background-color: #EB3737;
+}
+
+main .diaria {
+    background-color: #6AFA49;
+}
+
+main .mensual {
+    background-color: #5C81FF;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+ANIMACIÓN BOTÓN
+------------------------------------------------------------------------------------------------------------*/
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.20, 1.20, 1.20);
+    transform: scale3d(1.20, 1.20, 1.20);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.20, 1.20, 1.20);
+    transform: scale3d(1.20, 1.20, 1.20);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+MEDIA QUERIES
+------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1100px) {
+    header .container .opciones {
+        flex-direction: column;
+    }
+
+    header .container .seccion_crear,
+    header .container .seccion_filtrar {
+        width: 100%;
+    }
+
+    header .container .seccion_crear {
+        border-bottom: 1px solid #aaa;
+        border-right: none;
+        padding-right: 0;
+    }
+    
+    header .container .seccion_filtrar {
+        padding-left: 0;
+    }
+
+    .container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 636px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 386px) {
+    .container {
+        width: 90%;
+    }
+
+    header .titulo {
+        font-size: 3.5em;
+    }
+}
