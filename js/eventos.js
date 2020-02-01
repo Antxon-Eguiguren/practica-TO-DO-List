@@ -10,7 +10,7 @@ function recogerDatosNuevaTarea(e) {
     let prioridadTarea = document.getElementById('prioridadTareaCrear').value;
     crearTarea(listadoTareas, nombreTarea, prioridadTarea);
     formulario.reset();
-    selectorTareas.value = 'todas';
+    selectorTareas.value = '';
     buscarTarea.value = '';
 }
 
@@ -28,4 +28,5 @@ function recogerDatosBuscarTarea(e) {
     let busqueda = e.target.value;
     let listaFiltrada = buscarTareas(listadoTareas, busqueda);
     pintarTareas(listaFiltrada);
+    selectorTareas.value = '';
 }
